@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Name · Personal Website</title>
+    <title>Angela Zhang · Biomedical Engineer</title>
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
@@ -63,7 +63,7 @@
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.75rem;
             list-style: none;
             font-weight: 500;
         }
@@ -126,7 +126,7 @@
         .hero-content p {
             font-size: 1.15rem;
             color: #4a5b6e;
-            max-width: 500px;
+            max-width: 520px;
             margin: 0.75rem 0 1.5rem;
         }
 
@@ -336,6 +336,104 @@
             font-size: 0.95rem;
         }
 
+        .skill-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .skill-detail {
+            background: #fff;
+            border: 1px solid #f0f2f5;
+            border-radius: 16px;
+            padding: 1.5rem 1.75rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        .skill-detail h3 {
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .skill-detail h3 i {
+            color: #2563eb;
+        }
+
+        .skill-detail p {
+            font-size: 0.92rem;
+            color: #4a5b6e;
+        }
+
+        /* ---------- EXPERIENCE ---------- */
+        .experience-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .experience-item {
+            background: #fff;
+            border: 1px solid #f0f2f5;
+            border-radius: 16px;
+            padding: 1.75rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            transition: all 0.25s;
+        }
+
+        .experience-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        .exp-top {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .exp-role {
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .exp-org {
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .exp-dates {
+            color: #5a6b7e;
+            font-size: 0.9rem;
+        }
+
+        .experience-item ul {
+            margin: 0.5rem 0 0 1.1rem;
+            color: #4a5b6e;
+            font-size: 0.93rem;
+        }
+
+        .experience-item li {
+            margin-bottom: 0.4rem;
+        }
+
+        .subhead {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #2d3a4f;
+            margin: 2.5rem 0 1rem;
+        }
+
+        .subhead:first-child {
+            margin-top: 0;
+        }
+
         /* ---------- PROJECTS ---------- */
         .projects-grid {
             display: grid;
@@ -358,7 +456,7 @@
         }
 
         .project-thumb {
-            height: 160px;
+            height: 130px;
             background: linear-gradient(135deg, #e0e7ff, #dbeafe);
             display: flex;
             align-items: center;
@@ -376,13 +474,19 @@
         }
 
         .project-body h3 {
-            font-size: 1.15rem;
-            margin-bottom: 0.4rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .project-meta {
+            font-size: 0.8rem;
+            color: #5a6b7e;
+            margin-bottom: 0.6rem;
         }
 
         .project-body p {
             color: #4a5b6e;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             margin-bottom: 1rem;
         }
 
@@ -400,6 +504,42 @@
             border-radius: 20px;
             color: #2d3a4f;
             letter-spacing: 0.2px;
+        }
+
+        /* ---------- EDUCATION ---------- */
+        .education-card {
+            background: #fff;
+            border: 1px solid #f0f2f5;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+        }
+
+        .education-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .education-card .edu-meta {
+            color: #2563eb;
+            font-weight: 600;
+            margin-bottom: 0.15rem;
+        }
+
+        .education-card .edu-sub {
+            color: #5a6b7e;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .education-card h4 {
+            font-size: 0.95rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .education-card p {
+            color: #4a5b6e;
+            font-size: 0.92rem;
         }
 
         /* ---------- CONTACT ---------- */
@@ -597,14 +737,16 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">YourName</div>
+                <div class="logo">Angela Zhang</div>
                 <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
                 </button>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -614,18 +756,22 @@
     <!-- ==================== HERO ==================== -->
     <section class="hero container">
         <div class="hero-content">
-            <div class="badge">👋 Welcome</div>
-            <h1>I'm <span>Your Name</span></h1>
-            <p>Developer · Designer · Creator. I build things for the web and beyond.</p>
+            <div class="badge">🧬 Biomedical Engineer · Translational Oncology</div>
+            <h1>I'm <span>Angela Zhang</span></h1>
+            <p>
+                Biomedical engineering graduate with hands-on training in oncological research,
+                seeking a Research Associate or Lab Specialist role in drug discovery and
+                translational oncology &mdash; and working toward a Ph.D. in Cancer Biology.
+            </p>
             <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#experience" class="btn btn-primary">View Experience</a>
                 <a href="#contact" class="btn btn-outline">Get in Touch</a>
             </div>
         </div>
         <div class="hero-avatar">
             <!-- Replace the src with your own image, or keep the placeholder -->
-            <div class="avatar-placeholder">YN</div>
-            <!-- <img src="your-photo.jpg" alt="Your Name" /> -->
+            <div class="avatar-placeholder">AZ</div>
+            <!-- <img src="your-photo.jpg" alt="Angela Zhang" /> -->
         </div>
     </section>
 
@@ -634,39 +780,40 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="divider"></div>
-            <p class="section-subtitle">A quick look at who I am and what I do.</p>
+            <p class="section-subtitle">Summary of who I am and the research I do.</p>
 
             <div class="about-grid">
                 <div class="about-text">
                     <p>
-                        Hi there! I'm a passionate developer with a love for clean code,
-                        thoughtful design, and creating digital experiences that make a difference.
-                        I enjoy turning complex problems into simple, elegant solutions.
+                        I'm an experienced biomedical engineering graduate with extensive hands-on
+                        training in oncological research, looking for a Research Associate or Lab
+                        Specialist position to deepen my skills in drug discovery and translational
+                        oncology.
                     </p>
                     <p>
-                        When I'm not coding, you'll find me exploring new technologies,
-                        contributing to open source, or sharing what I learn with the community.
+                        I'm experienced with mammalian cell culture, molecular biology techniques,
+                        Western blotting, and immunohistochemistry, as well as preclinical drug
+                        testing methods. I'm enthusiastic about developing new treatments for breast
+                        and prostate cancers while working toward my Ph.D. in Cancer Biology.
                     </p>
                     <div class="social-links">
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="#" aria-label="Dev.to"><i class="fab fa-dev"></i></a>
+                        <a href="https://www.linkedin.com/in/angela-zhang-13067b262/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:studioselect20@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/Ange2226" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <div class="about-stats">
                     <div class="stat-item">
-                        <span class="stat-number">5+</span>
-                        <span class="stat-label">Years of Experience</span>
+                        <span class="stat-number">17+</span>
+                        <span class="stat-label">Cancer cell lines cultured (breast, prostate & other models)</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">12</span>
-                        <span class="stat-label">Projects Delivered</span>
+                        <span class="stat-number">2+ yrs</span>
+                        <span class="stat-label">In the Chinnaiyan Lab, oncology drug-development research</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">∞</span>
-                        <span class="stat-label">Coffee cups consumed</span>
+                        <span class="stat-number">2026</span>
+                        <span class="stat-label">B.S. Biomedical Engineering, University of Michigan</span>
                     </div>
                 </div>
             </div>
@@ -676,134 +823,427 @@
     <!-- ==================== SKILLS ==================== -->
     <section class="section" id="skills" style="background: #f1f4fa;">
         <div class="container">
-            <h2 class="section-title">Skills</h2>
+            <h2 class="section-title">Technical Skills &amp; Strengths</h2>
             <div class="divider"></div>
-            <p class="section-subtitle">Tools & technologies I work with regularly.</p>
+            <p class="section-subtitle">Core laboratory, computational, and communication skills.</p>
 
             <div class="skills-grid">
                 <div class="skill-card">
-                    <i class="fab fa-html5"></i>
-                    <span>HTML5</span>
+                    <i class="fas fa-flask"></i>
+                    <span>Mammalian Cell Culture</span>
                 </div>
                 <div class="skill-card">
-                    <i class="fab fa-css3-alt"></i>
-                    <span>CSS3</span>
+                    <i class="fas fa-vials"></i>
+                    <span>Western Blot &amp; ELISA</span>
                 </div>
                 <div class="skill-card">
-                    <i class="fab fa-js"></i>
-                    <span>JavaScript</span>
+                    <i class="fas fa-dna"></i>
+                    <span>CRISPR/Cas9 Editing</span>
                 </div>
                 <div class="skill-card">
-                    <i class="fab fa-react"></i>
-                    <span>React</span>
+                    <i class="fas fa-scissors"></i>
+                    <span>PCR, Cloning &amp; Gibson Assembly</span>
                 </div>
                 <div class="skill-card">
-                    <i class="fab fa-python"></i>
-                    <span>Python</span>
+                    <i class="fas fa-microscope"></i>
+                    <span>IHC &amp; Histology</span>
                 </div>
                 <div class="skill-card">
-                    <i class="fab fa-node"></i>
-                    <span>Node.js</span>
+                    <i class="fas fa-chart-line"></i>
+                    <span>IC50 &amp; Dose-Response</span>
                 </div>
                 <div class="skill-card">
-                    <i class="fab fa-git-alt"></i>
-                    <span>Git</span>
+                    <i class="fas fa-atom"></i>
+                    <span>BLI / SPR Binding Analysis</span>
                 </div>
                 <div class="skill-card">
-                    <i class="fas fa-database"></i>
-                    <span>SQL</span>
+                    <i class="fas fa-square-root-variable"></i>
+                    <span>MATLAB</span>
                 </div>
                 <div class="skill-card">
-                    <i class="fab fa-figma"></i>
-                    <span>Figma</span>
+                    <i class="fas fa-cube"></i>
+                    <span>SolidWorks CAD</span>
                 </div>
                 <div class="skill-card">
-                    <i class="fas fa-cloud"></i>
-                    <span>AWS</span>
+                    <i class="fas fa-file-excel"></i>
+                    <span>MS Office Suite</span>
+                </div>
+            </div>
+
+            <div class="skill-details">
+                <div class="skill-detail">
+                    <h3><i class="fas fa-microscope"></i> Laboratory &amp; Molecular Techniques</h3>
+                    <p>
+                        Mammalian cell culture &amp; maintenance (17+ cancer cell lines across breast,
+                        prostate, and other oncology models); protein analysis (Western blot, protein
+                        harvesting, ELISA, thermal stability analysis); nucleic acid workflows (RNA/DNA
+                        extraction, PCR, plasmid amplification, cloning, Gibson Assembly); functional
+                        genomics (CRISPR/Cas9 editing, monoclonal selection, CTG viability assays, IC50
+                        determination); drug-development support (dose-response validation, selectivity
+                        screening, mechanistic verification, BLI/SPR binding analysis); histology &amp; in
+                        vivo support (necropsy, tissue cassette embedding, IHC staining); method
+                        validation, GMP/GDP compliance, and reagent preparation &amp; inventory management.
+                    </p>
+                </div>
+                <div class="skill-detail">
+                    <h3><i class="fas fa-laptop-code"></i> Software &amp; Tools</h3>
+                    <p>
+                        Microsoft Office Suite (Excel, PowerPoint, Word) for data documentation,
+                        statistical analysis, and scientific presentation; MATLAB for quantitative data
+                        analysis, signal processing, and experimental modeling; basic CAD design
+                        (SolidWorks) for biomedical device prototyping and feasibility testing; graphing
+                        and statistical tools for experimental reproducibility, figure preparation, and
+                        manuscript support.
+                    </p>
+                </div>
+                <div class="skill-detail">
+                    <h3><i class="fas fa-comments"></i> Language &amp; Interpersonal Skills</h3>
+                    <p>
+                        Fluent in English and Mandarin Chinese, with a conversational understanding of
+                        Fujianese. Skilled at translating complex scientific concepts for diverse
+                        audiences (students, collaborators, non-specialists). Patient, adaptable
+                        communicator experienced in de-escalation, mentorship, and collaborative
+                        problem-solving.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE ==================== -->
+    <section class="section" id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">Research, technical support, and teaching roles.</p>
+
+            <div class="subhead">Research</div>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <div class="exp-top">
+                        <div>
+                            <div class="exp-role">Research Assistant</div>
+                            <div class="exp-org">Chinnaiyan Lab &middot; Ann Arbor, MI</div>
+                        </div>
+                        <div class="exp-dates">July 2024 &ndash; August 2026</div>
+                    </div>
+                    <ul>
+                        <li>Explore the link between the NSD2 and GSPT1 molecules in AR signaling and TFAP2C pathways in breast and prostate cancer models to reveal oncogenic mechanisms and contribute to drug-development research.</li>
+                        <li>Maintain and optimize 17 different cancer cell cultures to support high-throughput drug screening and validation testing for selectivity and potency.</li>
+                        <li>Develop and run drug validation and verification experiments, including dose-response assessments and off-target effect analysis, to characterize leads for clinical applications.</li>
+                        <li>Support in vivo studies under Dr. YuanYuan Qiao, performing necropsy, cassette embedding, and IHC staining for tumor tissue analysis.</li>
+                        <li>Apply molecular biology techniques to characterize cancer-related pathways and validate therapeutic targets.</li>
+                        <li>Record, analyze, and manage experimental data with a high degree of accuracy, ensuring data integrity; present scientific results in conference proceedings.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-top">
+                        <div>
+                            <div class="exp-role">Undergraduate Researcher</div>
+                            <div class="exp-org">Niederer's mRNA Lab &middot; Ann Arbor, MI</div>
+                        </div>
+                        <div class="exp-dates">January 2023 &ndash; December 2023</div>
+                    </div>
+                    <ul>
+                        <li>Studied mRNA processing and translation with Dr. Rachel Niederer, building fundamental experience in molecular cloning, RNA manipulation, and sterilization techniques.</li>
+                        <li>Performed plasmid isolation, bacterial transformation, and protein expression studies while keeping detailed lab records and following safety and reproducibility guidelines.</li>
+                        <li>Contributed to group discussions on experimental design and results interpretation, developing analytical and communication skills that carried into NSD2/GSPT1 oncogenesis research.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subhead">Technical &amp; Teaching</div>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <div class="exp-top">
+                        <div>
+                            <div class="exp-role">Consultant</div>
+                            <div class="exp-org">UMich ITS Tech Help &middot; Ann Arbor, MI</div>
+                        </div>
+                        <div class="exp-dates">January 2024 &ndash; December 2025</div>
+                    </div>
+                    <ul>
+                        <li>Provide first-line technical assistance for all ITS services, fixing hardware, software, and networking issues for students, faculty, and staff.</li>
+                        <li>Oversee large-format printing for academic conferences and research symposiums, meeting tight deadlines and quality standards.</li>
+                        <li>Keep the Fishbowl Computing Facility and other technology centers running through regular diagnostics, scheduled repairs, and performance monitoring; leverage the internal knowledge base for problem-solving.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-top">
+                        <div>
+                            <div class="exp-role">Mastery Proctor</div>
+                            <div class="exp-org">Michigan ECAS &middot; Ann Arbor, MI</div>
+                        </div>
+                        <div class="exp-dates">January 2024 &ndash; May 2026</div>
+                    </div>
+                    <ul>
+                        <li>Administer Math Gateway exams under strict integrity policies while maintaining an encouraging testing atmosphere for stressed students.</li>
+                        <li>Developed standard proctoring procedures, including identity verification and documentation of incidents.</li>
+                        <li>Provide guidance for technical problems and test-related stress, and collaborate with ECAS to improve proctoring strategies.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-top">
+                        <div>
+                            <div class="exp-role">Tutor / Supplemental Instructor</div>
+                            <div class="exp-org">Michigan ECAS &middot; Ann Arbor, MI</div>
+                        </div>
+                        <div class="exp-dates">August 2023 &ndash; May 2026</div>
+                    </div>
+                    <ul>
+                        <li>Provide weekly SI sessions for Calculus I (Math 115), giving students an interactive way to solve problems and prepare for exams.</li>
+                        <li>Adapt teaching methods to different learners using visuals, worked examples, and teamwork.</li>
+                        <li>Track student performance through assessments and consultations, coaching effective study skills; coordinate with course instructors to keep sessions aligned with lectures.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-top">
+                        <div>
+                            <div class="exp-role">Academic Facilitator</div>
+                            <div class="exp-org">Michigan STEM Program &middot; Ann Arbor, MI</div>
+                        </div>
+                        <div class="exp-dates">June 2024 &ndash; July 2025</div>
+                    </div>
+                    <ul>
+                        <li>Advised cohorts of ~60 and ~45 first-year students through summer transition programs to support success in STEM disciplines.</li>
+                        <li>Ran tutoring sessions that simplified mathematical concepts and built strong foundations for college-level work.</li>
+                        <li>Collaborated with program staff to create an environment that counters imposter syndrome, and used mentoring-session data to improve program outcomes.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subhead">Earlier Experience</div>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <div class="exp-top">
+                        <div>
+                            <div class="exp-role">Intern</div>
+                            <div class="exp-org">AGi Repair &middot; Greensburg, PA</div>
+                        </div>
+                        <div class="exp-dates">May 2021 &ndash; August 2021</div>
+                    </div>
+                    <ul>
+                        <li>Coordinated logistics across departments &mdash; inventory management, quality-control inspections, and shipping/receiving &mdash; to guarantee prompt repairs.</li>
+                        <li>Contributed to process-improvement efforts by identifying problem areas, proposing changes, and running trials.</li>
+                        <li>Worked with engineering and customer service to communicate technical repair information to clients.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-top">
+                        <div>
+                            <div class="exp-role">Restaurant Manager</div>
+                            <div class="exp-org">Zhen Choo Chinese Restaurant &middot; Pittsburgh, PA</div>
+                        </div>
+                        <div class="exp-dates">May 2014 &ndash; June 2022</div>
+                    </div>
+                    <ul>
+                        <li>Delivered strong customer service to keep the restaurant running smoothly.</li>
+                        <li>Managed website logistics and technology systems to improve efficiency and customer engagement.</li>
+                        <li>Developed quick problem-solving strategies to address customer concerns and maintain a welcoming environment.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ==================== PROJECTS ==================== -->
-    <section class="section" id="projects">
+    <section class="section" id="projects" style="background: #f1f4fa;">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title">Academic Projects</h2>
             <div class="divider"></div>
-            <p class="section-subtitle">A few things I've built recently.</p>
+            <p class="section-subtitle">Biomedical design projects at the University of Michigan.</p>
 
             <div class="projects-grid">
-                <!-- Project 1 -->
                 <div class="project-card">
-                    <div class="project-thumb">
-                        <i class="fa-solid fa-code fa-3x"></i>
-                    </div>
+                    <div class="project-thumb"><i class="fa-solid fa-car-on fa-3x"></i></div>
                     <div class="project-body">
-                        <h3>Portfolio Builder</h3>
-                        <p>An open-source tool to create beautiful developer portfolios in minutes.</p>
-                        <div class="project-tags">
-                            <span>React</span>
-                            <span>Tailwind</span>
-                            <span>Vite</span>
-                        </div>
+                        <h3>NapSnapPro</h3>
+                        <div class="project-meta">BME 450 &middot; Jan 2026 &ndash; May 2026</div>
+                        <p>Real-time alert device to detect pre-episode drowsiness in drivers with narcolepsy. Analyzed physiological symptom progression (blink rate, slow eye movements, reduced HRV, lane deviation) to identify a critical intervention window before microsleep, mapped device failure modes via task analysis, benchmarked existing solutions against six clinical criteria, and prepared verification &amp; validation plans for external design review.</p>
+                        <div class="project-tags"><span>V&amp;V Planning</span><span>Human Factors</span><span>Sensor Analysis</span></div>
                     </div>
                 </div>
-                <!-- Project 2 -->
                 <div class="project-card">
-                    <div class="project-thumb">
-                        <i class="fa-solid fa-robot fa-3x"></i>
-                    </div>
+                    <div class="project-thumb"><i class="fa-solid fa-heart-pulse fa-3x"></i></div>
                     <div class="project-body">
-                        <h3>AI Chat Assistant</h3>
-                        <p>A conversational AI interface with real-time responses and memory.</p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>FastAPI</span>
-                            <span>WebSocket</span>
-                        </div>
+                        <h3>Cardiogram</h3>
+                        <div class="project-meta">BME 458 &middot; Aug 2025 &ndash; Dec 2025</div>
+                        <p>Low-cost benchtop multiparameter physiological monitor integrating sidestream capnography (NDIR CO2 sensor, Arduino Uno) and oscillometric blood-pressure measurement (pressure sensor, signal-conditioning circuits, Arduino Leonardo). Developed algorithms to estimate EtCO2 and systolic/diastolic/mean arterial pressure; validated EtCO2 in the 35&ndash;45 mmHg clinical range and BP within 15 mmHg of a commercial standard.</p>
+                        <div class="project-tags"><span>Arduino</span><span>Signal Processing</span><span>Instrumentation</span></div>
                     </div>
                 </div>
-                <!-- Project 3 -->
                 <div class="project-card">
-                    <div class="project-thumb">
-                        <i class="fa-solid fa-chart-line fa-3x"></i>
-                    </div>
+                    <div class="project-thumb"><i class="fa-solid fa-heart-circle-bolt fa-3x"></i></div>
                     <div class="project-body">
-                        <h3>Analytics Dashboard</h3>
-                        <p>Interactive dashboard for visualizing metrics and user behavior.</p>
-                        <div class="project-tags">
-                            <span>Vue</span>
-                            <span>D3</span>
-                            <span>Express</span>
-                        </div>
+                        <h3>ExFusion</h3>
+                        <div class="project-meta">BME 321 &middot; Jan 2025 &ndash; May 2025</div>
+                        <p>Inexpensive ex vivo vascular culture system that mimics physiological flow and pressure to support vascular biology studies, drug screening, and tissue-engineered product testing. Contributed to CAD design, feasibility testing, and documentation so the system could be adopted by other researchers.</p>
+                        <div class="project-tags"><span>SolidWorks</span><span>Feasibility Testing</span><span>Tissue Engineering</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-thumb"><i class="fa-solid fa-diagram-project fa-3x"></i></div>
+                    <div class="project-body">
+                        <h3>BYPASSION</h3>
+                        <div class="project-meta">BME 350 &middot; Aug 2024 &ndash; Dec 2024</div>
+                        <p>Theoretical drug-eluting bypass graft delivering sirolimus locally to prevent restenosis in peripheral artery disease. Conducted a literature review on polymer coatings, stent technologies, and bypass outcomes; developed performance metrics; proposed testing methods; and presented to faculty.</p>
+                        <div class="project-tags"><span>Drug Delivery</span><span>Literature Review</span><span>Design Metrics</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-thumb"><i class="fa-solid fa-bone fa-3x"></i></div>
+                    <div class="project-body">
+                        <h3>G20</h3>
+                        <div class="project-meta">BME 410 &middot; Aug 2024 &ndash; Dec 2024</div>
+                        <p>Biodegradable artificial tendon modeled with composite biomaterials in a four-person team. Focused on mechanical strength, biocompatibility, and degradation kinetics; produced a theoretical prototype supported by finite element analysis and discussed pathways to preclinical testing.</p>
+                        <div class="project-tags"><span>Biomaterials</span><span>FEA</span><span>Composites</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-thumb"><i class="fa-solid fa-microchip fa-3x"></i></div>
+                    <div class="project-body">
+                        <h3>SOLMA</h3>
+                        <div class="project-meta">Engineering 100 &middot; Aug 2022 &ndash; Dec 2022</div>
+                        <p>Theoretical handheld biosensor for detecting illicit drugs, designed with client Dr. Rosenberg. Led background research on detection methods, user-interface design, and material selection, and delivered a final presentation with proof-of-concept schematics and use-case scenarios.</p>
+                        <div class="project-tags"><span>Biosensors</span><span>UI Design</span><span>Proof of Concept</span></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ==================== LEADERSHIP ==================== -->
+    <section class="section" id="leadership">
+        <div class="container">
+            <h2 class="section-title">Leadership</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">Student organizations and community roles.</p>
+
+            <div class="experience-list">
+                <div class="experience-item">
+                    <div class="exp-top">
+                        <div>
+                            <div class="exp-role">Secretary</div>
+                            <div class="exp-org">Muay Thai at University of Michigan &middot; Ann Arbor, MI</div>
+                        </div>
+                        <div class="exp-dates">January 2025 &ndash; May 2026</div>
+                    </div>
+                    <ul>
+                        <li>Manage internal operations for a new martial-arts student organization &mdash; meeting minutes, membership records, and weekly practice logistics.</li>
+                        <li>Book practice facilities, ensure adequate equipment, and enforce safety regulations for a well-regulated space serving 30+ members.</li>
+                        <li>Act as the intermediary between the executive board and the membership.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-top">
+                        <div>
+                            <div class="exp-role">Vice President &amp; Financial Operations</div>
+                            <div class="exp-org">YENIKA Editorial &middot; Ann Arbor, MI</div>
+                        </div>
+                        <div class="exp-dates">January 2024 &ndash; August 2024</div>
+                    </div>
+                    <ul>
+                        <li>Co-founded a student-driven platform for stories about culture and social justice, building its organizational structure and operating processes.</li>
+                        <li>Ran budgeting, secured student-government funding, and set up an effective expense system.</li>
+                        <li>Met with the team twice weekly to keep members coordinated.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-top">
+                        <div>
+                            <div class="exp-role">PR Chair</div>
+                            <div class="exp-org">Dream Corps &middot; Ann Arbor, MI</div>
+                        </div>
+                        <div class="exp-dates">September 2023 &ndash; May 2024</div>
+                    </div>
+                    <ul>
+                        <li>Led social media strategy and public relations for an NGO promoting education equality for children in rural China.</li>
+                        <li>Created three fundraising campaigns &mdash; including a cultural festival and charity drive &mdash; that exceeded annual targets.</li>
+                        <li>Partnered with 5+ college societies on cultural events and produced professional marketing materials.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-top">
+                        <div>
+                            <div class="exp-role">Council Member</div>
+                            <div class="exp-org">Michigan STEM Academics Council &middot; Ann Arbor, MI</div>
+                        </div>
+                        <div class="exp-dates">August 2022 &ndash; May 2024</div>
+                    </div>
+                    <ul>
+                        <li>Advocated for an M-STEM cohort of 100+ students through study sessions, wellness activities, and academic workshops to support retention.</li>
+                        <li>Helped plan the annual M-STEM Banquet (150+ attendees), coordinating vendors and programming.</li>
+                        <li>Assisted in developing a first-year mentoring program pairing students with upperclassmen mentors.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-top">
+                        <div>
+                            <div class="exp-role">Teaching Assistant</div>
+                            <div class="exp-org">Pittsburgh Chinese School &middot; Pittsburgh, PA</div>
+                        </div>
+                        <div class="exp-dates">August 2021 &ndash; May 2022</div>
+                    </div>
+                    <ul>
+                        <li>Supported lead teachers delivering a beginner Mandarin curriculum to 20+ K&ndash;4 students with interactive, culturally grounded exercises.</li>
+                        <li>Designed and taught beginner guzheng (Chinese zither) lessons, adapting to each student's ability.</li>
+                        <li>Provided personalized feedback and worked with teachers and parents to build a supportive, low-anxiety classroom.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EDUCATION ==================== -->
+    <section class="section" id="education" style="background: #f1f4fa;">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">Degree and relevant coursework.</p>
+
+            <div class="education-card">
+                <h3>University of Michigan, College of Engineering</h3>
+                <div class="edu-meta">Bachelor of Science in Biomedical Engineering &middot; Minor in Materials Science &amp; Engineering</div>
+                <div class="edu-sub">Ann Arbor, MI &middot; Class of 2026</div>
+                <h4>Relevant Coursework</h4>
+                <p>
+                    Biopharmaceutical Engineering, Biomedical Design, Emergency Response, Quantitative
+                    Cell Biology, Quantitative Physiology, Bioreaction Engineering &amp; Design, Biophysics
+                    &amp; Thermodynamics, Introduction to Biomechanics, Circuits &amp; Systems for Biomedical
+                    Applications, Biomaterials Design &amp; Applications, Composite Materials, Cell &amp;
+                    Molecular Biology, Human Anatomy, Polymeric Materials, Structures of Materials,
+                    Biomedical Instrumentation and Design.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- ==================== CONTACT ==================== -->
-    <section class="section" id="contact" style="background: #f1f4fa;">
+    <section class="section" id="contact">
         <div class="container">
             <h2 class="section-title">Get in Touch</h2>
             <div class="divider"></div>
-            <p class="section-subtitle">Have a question or want to work together? Let's talk.</p>
+            <p class="section-subtitle">Open to Research Associate and Lab Specialist roles in drug discovery and translational oncology.</p>
 
             <div class="contact-wrapper">
                 <div class="contact-info">
                     <h3>Let's connect</h3>
-                    <p>I'm always open to new opportunities, collaborations, or just a friendly chat.</p>
+                    <p>I'm always open to new research opportunities, collaborations, or a conversation about cancer biology.</p>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <span>hello@yourdomain.com</span>
+                        <a href="mailto:studioselect20@gmail.com">studioselect20@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(412) 712-2362</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/angela-zhang-13067b262/" target="_blank" rel="noopener">linkedin.com/in/angela-zhang-13067b262</a>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Remote · Anywhere</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <span>Available for freelance work</span>
+                        <span>Ann Arbor, MI</span>
                     </div>
                 </div>
                 <form class="contact-form" id="contactForm">
@@ -817,7 +1257,7 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" placeholder="Tell me about your project..." required></textarea>
+                        <textarea id="message" placeholder="Tell me about the role or project..." required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">
                         <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i> Send Message
@@ -831,13 +1271,11 @@
     <footer>
         <div class="container">
             <div class="footer-social">
-                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                <a href="#" aria-label="Dev.to"><i class="fab fa-dev"></i></a>
+                <a href="https://www.linkedin.com/in/angela-zhang-13067b262/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:studioselect20@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/Ange2226" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
             </div>
-            <p>&copy; 2026 Your Name. Built with <i class="fas fa-heart" style="color: #2563eb;"></i> for the web.</p>
+            <p>&copy; 2026 Angela Zhang. Biomedical Engineering &middot; Translational Oncology.</p>
         </div>
     </footer>
 
@@ -865,7 +1303,7 @@
             });
         });
 
-        // ----- Contact form handler (simple demo) -----
+        // ----- Contact form handler (opens the visitor's email client) -----
         const form = document.getElementById('contactForm');
         form.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -874,8 +1312,9 @@
             const message = document.getElementById('message').value.trim();
 
             if (name && email && message) {
-                alert(`Thanks for reaching out, ${name}!\nI'll get back to you soon. ✨`);
-                form.reset();
+                const subject = encodeURIComponent(`Website inquiry from ${name}`);
+                const body = encodeURIComponent(`${message}\n\nFrom: ${name} (${email})`);
+                window.location.href = `mailto:studioselect20@gmail.com?subject=${subject}&body=${body}`;
             } else {
                 alert('Please fill in all fields.');
             }
