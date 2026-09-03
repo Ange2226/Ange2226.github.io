@@ -14,6 +14,7 @@
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
@@ -505,6 +506,108 @@
             letter-spacing: 0.2px;
         }
 
+        /* ---------- AWARDS GRID ---------- */
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+        
+        .award-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 1.8rem 1.5rem;
+            border: 1px solid #f0f2f5;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .award-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.07);
+            border-color: #2563eb;
+        }
+        
+        .award-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        
+        .award-header i {
+            font-size: 2rem;
+            color: #2563eb;
+            opacity: 0.4;
+        }
+        
+        .award-badge {
+            display: inline-block;
+            padding: 0.25rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
+        
+        .badge-gold {
+            background: #fef3c7;
+            color: #b45309;
+        }
+        
+        .badge-silver {
+            background: #f3f4f6;
+            color: #4b5563;
+        }
+        
+        .badge-blue {
+            background: #dbeafe;
+            color: #1d4ed8;
+        }
+        
+        .badge-green {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        .award-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            color: #1e2a3a;
+        }
+        
+        .award-meta {
+            display: flex;
+            gap: 1.2rem;
+            font-size: 0.85rem;
+            color: #5a6b7e;
+            margin-bottom: 0.75rem;
+            flex-wrap: wrap;
+        }
+        
+        .award-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        
+        .award-meta i {
+            font-size: 0.8rem;
+            color: #2563eb;
+            opacity: 0.7;
+        }
+        
+        .award-card p {
+            font-size: 0.92rem;
+            color: #2d3a4f;
+            line-height: 1.5;
+            margin: 0;
+            flex-grow: 1;
+        }
         /* ---------- EDUCATION ---------- */
         .education-card {
             background: #fff;
@@ -767,7 +870,7 @@
             </div>
         </div>
         <div class="hero-avatar">
-            <img src="profile.png" alt="Angela Zhang" />
+            <img src="angela.jpg" alt="Angela Zhang" />
         </div>
     </section>
 
@@ -783,6 +886,17 @@
                        I'm a biomedical engineering graduate with extensive hands-on training in oncological research,
                         currently based in the Boston area. My work focuses on understanding the molecular mechanism,
                         with a passion for drug discovery and translational oncology. 
+                    </p>
+                    <p>
+                        What truly drives me is the belief that the answers to cancer lie at the intersection of genetics, 
+                        drug development, and sheer persistence. My work on NSD2 and GSPT1 interactions has shown me just 
+                        how much we still don't know—and that's exactly what excites me. Every failed experiment teaches me 
+                        something new, and every breakthrough, no matter how small, feels like a step closer to therapies 
+                        that could actually change lives. I'm particularly drawn to the challenge of translating mechanistic 
+                        discoveries into real-world treatments, whether that's through optimizing drug candidates or uncovering 
+                        new genetic vulnerabilities in cancer cells. Moving to Boston, I'm eager to immerse myself in a 
+                        community where cutting-edge science and deep collaboration are the norm—and to grow into the kind of 
+                        researcher who not only asks bold questions but also knows how to answer them.
                     </p>
                     <p>
                         Outside the lab, I live for movement and rhythm. You'll often find me dancing
@@ -869,7 +983,7 @@
                     <span>Invivo</span>
                 </div>
                 <div class="skill-card">
-                    <i class="fas fa-file-code-o"></i>
+                    <i class="fa fa-file-code-o" aria-hidden="true"></i>
                     <span>MATLAB</span>
                 </div>
                 <div class="skill-card">
@@ -1209,60 +1323,67 @@
     </section>
 
     <!-- ==================== AWARDS ==================== -->
-    <section class="section" id="awards" style="background: #ffffff;">
+    <section class="section" id="awards">
         <div class="container">
             <h2 class="section-title">Awards & Recognitions</h2>
             <div class="divider"></div>
             <p class="section-subtitle">Excellence in business, leadership, and the performing arts.</p>
 
-            <div class="timeline">
+            <div class="awards-grid">
                 <!-- FBLA Award -->
-                <div class="timeline-item">
-                    <div class="item-header">
-                        <span class="item-title">5th Place – Client Service</span>
-                        <span class="item-org">Future Business Leaders of America (FBLA)</span>
-                        <span class="item-date">2022</span>
+                <div class="award-card">
+                    <div class="award-header">
+                        <span class="award-badge badge-blue">5th Place</span>
+                        <i class="fas fa-trophy"></i>
                     </div>
-                    <ul>
-                        <li>Pennsylvania State Convention — placed 5th out of hundreds of competitors.</li>
-                        <li>Missed qualifying for Nationals by a single placement (top 4 advance).</li>
-                    </ul>
+                    <h3>Client Service</h3>
+                    <div class="award-meta">
+                        <span><i class="fas fa-building"></i> FBLA</span>
+                        <span><i class="fas fa-calendar-alt"></i> 2022</span>
+                    </div>
+                    <p>Pennsylvania State Convention — placed 5th out of hundreds of competitors, missing Nationals by a single placement (top 4 advance).</p>
                 </div>
 
                 <!-- Guzheng Level 2 -->
-                <div class="timeline-item">
-                    <div class="item-header">
-                        <span class="item-title">1st Place – Guzheng Level 2</span>
-                        <span class="item-org">Singapore Competition</span>
-                        <span class="item-date">2021</span>
+                <div class="award-card">
+                    <div class="award-header">
+                        <span class="award-badge badge-gold">1st Place</span>
+                        <i class="fas fa-music"></i>
                     </div>
-                    <ul>
-                        <li>Awarded top honors in Level 2 Chinese zither (Guzheng) performance.</li>
-                    </ul>
+                    <h3>Guzheng Level 2</h3>
+                    <div class="award-meta">
+                        <span><i class="fas fa-globe-asia"></i> Singapore Competition</span>
+                        <span><i class="fas fa-calendar-alt"></i> 2021</span>
+                    </div>
+                    <p>Awarded top honors in Chinese zither (Guzheng) performance at Level 2.</p>
                 </div>
 
                 <!-- Guzheng Level 3 -->
-                <div class="timeline-item">
-                    <div class="item-header">
-                        <span class="item-title">2nd Place – Guzheng Level 3</span>
-                        <span class="item-org">Singapore Competition</span>
-                        <span class="item-date">2022</span>
+                <div class="award-card">
+                    <div class="award-header">
+                        <span class="award-badge badge-silver">2nd Place</span>
+                        <i class="fas fa-music"></i>
                     </div>
-                    <ul>
-                        <li>Secured 2nd place in Level 3, demonstrating continued excellence and musical progression.</li>
-                    </ul>
+                    <h3>Guzheng Level 3</h3>
+                    <div class="award-meta">
+                        <span><i class="fas fa-globe-asia"></i> Singapore Competition</span>
+                        <span><i class="fas fa-calendar-alt"></i> 2022</span>
+                    </div>
+                    <p>Secured 2nd place in Level 3, demonstrating continued excellence and musical progression.</p>
                 </div>
+
                 <!-- HSK Certification -->
-                <div class="timeline-item">
-                    <div class="item-header">
-                        <span class="item-title">HSK Level 5 &amp; 6 Certification</span>
-                        <span class="item-org">Chinese Proficiency Test (HSK)</span>
-                        <span class="item-date">2021 – 2022</span>
+                <div class="award-card">
+                    <div class="award-header">
+                        <span class="award-badge badge-green">Level 5 &amp; 6</span>
+                        <i class="fas fa-language"></i>
                     </div>
-                    <ul>
-                        <li>Passed HSK Level 5 in 2021 and Level 6 in 2022 — demonstrating advanced professional-level fluency in Mandarin Chinese.</li>
-                        <li>Certifies ability to conduct high-level academic and professional discussions in Chinese.</li>
-                    </ul>
+                    <h3>Chinese Proficiency Test</h3>
+                    <div class="award-meta">
+                        <span><i class="fas fa-university"></i> HSK</span>
+                        <span><i class="fas fa-calendar-alt"></i> 2021–2022</span>
+                    </div>
+                    <p>Passed HSK Level 5 (2021) and Level 6 (2022) — certifying advanced professional-level fluency in Mandarin Chinese for academic and professional settings.</p>
                 </div>
             </div>
         </div>
